@@ -1,113 +1,262 @@
-import Image from "next/image";
-
+// src/app/page.js
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+    <div className="App">
+      <nav className="nav-elements">
+        <a href="/">
+          <img src="https://landing.zytheme.com/magma/assets/images/logo/logo-dark.svg" alt="Logo" />
+        </a>
+        <ul id="nav-pages">
+          <li><a href="/">Home</a></li>
+          <li><a href="#about-us">About</a></li>
+          <li><a href="#facts">Facts</a></li>
+          <li><a href="#pricing-table">Pricing</a></li>
+          <li><a href="#testimonial">Testimonial</a></li>
+          <li><a href="#subscribe">Subscribe</a></li>
+          <li><span>|</span></li>
+          <li><a href="/" className="icon"><i className="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="/" className="icon"><i className="fa-brands fa-instagram"></i></a></li>
+          <li><a href="/" className="icon"><i className="fa-brands fa-twitter"></i></a></li>
+        </ul>
+      </nav>
+
+      <header className="hero">
+        <p>The Best in Market</p>
+        <h3>Online Services from leading experts in Market</h3>
+        <a href="#" className="btn">Start Your Service</a>
+
+        <div className="cards">
+          <div className="card">
+            <i className="fa-regular fa-clipboard fa-2xl" style={{marginTop: '15px', marginBottom: '15px'}}></i>
+            <h4>Data Analysis</h4>
+            <p>This Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div className="card">
+            <i className="fa-solid fa-pencil-ruler"></i>
+            <h4>Graphic Design</h4>
+            <p>This should. Lorem ipsum dolor sit.</p>
+          </div>
+          <div className="card">
+            <i className="fa-solid fa-camera-retro"></i>
+            <h4>Photography</h4>
+            <p>This should be Lorem ipsum dolor sit.</p>
+          </div>
+        </div>
+      </header>
+
+      <section id="about-us" className="our-future">
+        <div className="head">
+          <p style={{paddingTop: '80px', textAlign: 'center', color: '#999'}}>Our Future</p>
+          <h1>Grow up your Business</h1>
+        </div>
+        
+        <div className="products d-flex">
+          <div className="d-flex iproduct">
+            <img src="https://landing.zytheme.com/magma/assets/images/services/1.png" alt="" />
+            <h2>Search Engines</h2> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, accusantium.</p>
+            <div className="d-flex">
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+            </div> 
+            <a href="" className="btn btn-success">Checkout Now!</a>
+          </div>
+
+          <div className="d-flex iproduct">
+            <img src="https://landing.zytheme.com/magma/assets/images/services/2.png" alt="" />
+            <h2>Magic Touch</h2> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dignissimos.</p>
+            <div className="d-flex">
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+            </div> 
+            <a href="" className="btn btn-success">Checkout Now!</a>
+          </div>
+
+          <div className="d-flex iproduct">
+            <img src="https://landing.zytheme.com/magma/assets/images/services/3.png" alt="" />
+            <h2>Collect Ideas</h2> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, eligendi?</p>
+            <div className="d-flex">
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+            </div> 
+            <a href="" className="btn btn-success">Checkout Now!</a>
+          </div>
+        </div>
+      </section>
+
+      <div className="emp"></div>
+
+      <section id="facts" className="facts">
+        <div className="overlay-content">
+          <p className="small-heading">Some Facts</p>
+          <h1>We always ready for a challenge</h1>
+          <div className="stats">
+            <div className="stat-item">
+              <div className="stat-icon">👥</div>
+              <div className="stat-number">1035</div>
+              <div className="stat-label">Clients Satisfaction</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-icon">🎯</div>
+              <div className="stat-number">958</div>
+              <div className="stat-label">Great Projects</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-icon">🏆</div>
+              <div className="stat-number">435</div>
+              <div className="stat-label">Awards Won</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-icon">⏰</div>
+              <div className="stat-number">1236</div>
+              <div className="stat-label">Spend Time</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing-table" className="our-future">
+        <div className="head">
+          <p style={{paddingTop: '80px', textAlign: 'center', color: '#999'}}>Pricing Table</p>
+          <h1>without Hidden Charges</h1>
+        </div>
+        <div className="pricing-table">
+          <div className="plan">
+            <h2>Basic Plan</h2>
+            <div className="price">$ <span>15</span></div>
+            <p>per month</p>
+            <ul>
+              <li><i className="fa fa-check"></i> Amazing Features</li>
+              <li><i className="fa fa-check"></i> 4 Gb Storage</li>
+              <li><i className="fa fa-check"></i> Domain Included</li>
+              <li><i className="fa fa-times"></i> Unlimited Users</li>
+              <li><i className="fa fa-times"></i> Unlimited Support</li>
+            </ul>
+            <button>Start your services</button>
+          </div>
+          <div className="plan">
+            <h2>Medium Plan</h2>
+            <div className="price">$ <span>25</span></div>
+            <p>per month</p>
+            <ul>
+              <li><i className="fa fa-check"></i> Amazing Features</li>
+              <li><i className="fa fa-check"></i> 4 Gb Storage</li>
+              <li><i className="fa fa-check"></i> Domain Included</li>
+              <li><i className="fa fa-times"></i> Unlimited Users</li>
+              <li><i className="fa fa-times"></i> Unlimited Support</li>
+            </ul>
+            <button>Start your services</button>
+          </div>
+          <div className="plan">
+            <h2>Professional Plan</h2>
+            <div className="price">$ <span>35</span></div>
+            <p>per month</p>
+            <ul>
+              <li><i className="fa fa-check"></i> Amazing Features</li>
+              <li><i className="fa fa-check"></i> 4 Gb Storage</li>
+              <li><i className="fa fa-check"></i> Domain Included</li>
+              <li><i className="fa fa-times"></i> Unlimited Users</li>
+              <li><i className="fa fa-times"></i> Unlimited Support</li>
+            </ul>
+            <button>Start your services</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonial" className="container">
+        <div className="image-bg">
+          <div className="overlay-head">
+            <div className="our-future">
+              <div className="heading">
+                <p style={{paddingTop: '80px', textAlign: 'center', color: '#999'}}>Testimonial</p>
+                <h1>what our users say</h1>
+              </div>
+              <div className="user-card">
+                <div className="image-container"></div>
+                <div className="note-container">
+                  <div className="testimonial">
+                    <div className="profile-quote">
+                      <img src="https://landing.zytheme.com/magma/assets/images/testimonials/quote-left.png" alt="" className="quotes" />
+                      <img src="https://landing.zytheme.com/magma/assets/images/testimonials/model-min.png" className="profile-pic" alt="Profile" />
+                      <img src="https://landing.zytheme.com/magma/assets/images/testimonials/quote-right.png" alt="" className="quotes" />
+                    </div>
+                    <div className="quote-container">
+                      <div className="name">Mark Smith</div>
+                      <div className="company">Envato Inc</div>
+                      <div className="quote">"This should be used to tell a story and include any testimonials you might have about your product or service for your clients"</div>
+                      <div className="rating">
+                        <i className="star">★</i>
+                        <i className="star">★</i>
+                        <i className="star">★</i>
+                        <i className="star">★</i>
+                        <i className="star">★</i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="empty"></div>
+      </section>
+
+      <div className="emp" id="subscribe"></div>
+
+      <section className="container1">
+        <h1>Get Offers</h1>
+        <h1>Subscribe to our newsletter</h1>
+        <input type="email" placeholder="Enter Your E-Mail" />
+        <button>Start your services</button>
+        <div className="info">
+          <i></i> Give it a try: it only takes a click to unsubscribe
+        </div>
+      </section>
+
+      <div className="emp"></div>
+
+      <footer className="foot">
+        <div className="logo">
+          <a href="/">
+            <img src="https://landing.zytheme.com/magma/assets/images/logo/logo-dark.svg" alt="Logo" />
           </a>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <div className="contact-details">
+          <div className="first">
+            <p>795 south park, wonderlan, australia</p>
+            <p>Magmasite@Envato.com</p>
+            <p>Mon. -Fri. 8am to 5pm</p>
+          </div>
+          <div className="second">
+            <p>+(123)456-789-102</p>
+            <p>www.Envato.com</p>
+            <p>sat. 8am to 11pm</p>
+          </div>
+        </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <hr />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <div className="social">
+          <p>@2024 All CopyWrite Reserved</p>
+          <div className="final-ico">
+            <a href="/" className="icon"><i className="fa-brands fa-facebook-f"></i></a>
+            <a href="/" className="icon"><i className="fa-brands fa-instagram"></i></a>
+            <a href="/" className="icon"><i className="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }
